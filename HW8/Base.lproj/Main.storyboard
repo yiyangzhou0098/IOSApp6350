@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NwQ-2w-zdF">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller.swift-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController.swift" customModule="HW8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Home">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5w-EL-zC6">
+                                <rect key="frame" x="162" y="494.66666666666674" width="66" height="35"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login" buttonSize="medium"/>
+                                <connections>
+                                    <segue destination="AUr-XK-qjp" kind="push" id="Mg1-1L-QBE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbz-dI-yvK">
+                                <rect key="frame" x="138.66666666666666" y="305.66666666666669" width="113" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U5w-EL-zC6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6JO-NA-gIK"/>
+                            <constraint firstItem="U5w-EL-zC6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="90" id="Kv7-h4-Vb0">
+                                <variation key="heightClass=compact" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="fbz-dI-yvK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="W1u-lU-3iN"/>
+                            <constraint firstItem="fbz-dI-yvK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WSC-9S-lFC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2yD-Kd-H8u"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.4000000000001" y="-30.134932533733135"/>
+        </scene>
+        <!--Logout-->
+        <scene sceneID="Sli-YD-Pe0">
+            <objects>
+                <viewController storyboardIdentifier="LoginController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AUr-XK-qjp" customClass="LoginViewController" customModule="HW8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xbt-Jb-xXY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="96V-py-B1t">
+                                <rect key="frame" x="131" y="417" width="128" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPR-Xf-VjV">
+                                <rect key="frame" x="152.66666666666666" y="491" width="85" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Confirm"/>
+                                <connections>
+                                    <action selector="login:" destination="AUr-XK-qjp" eventType="touchUpInside" id="hoa-Uj-W44"/>
+                                    <segue destination="is4-Bs-q9X" kind="push" id="alO-D2-RFp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chJ-Q4-PYR">
+                                <rect key="frame" x="138.66666666666666" y="255" width="113" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M1J-sQ-IPv">
+                                <rect key="frame" x="130" y="331" width="130" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yPW-Ed-0F7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="chJ-Q4-PYR" firstAttribute="centerY" secondItem="Xbt-Jb-xXY" secondAttribute="centerY" constant="-150" id="Cak-sH-Vx5">
+                                <variation key="heightClass=compact" constant="-130"/>
+                            </constraint>
+                            <constraint firstItem="M1J-sQ-IPv" firstAttribute="centerX" secondItem="Xbt-Jb-xXY" secondAttribute="centerX" id="G14-al-b24"/>
+                            <constraint firstItem="96V-py-B1t" firstAttribute="top" secondItem="M1J-sQ-IPv" secondAttribute="bottom" constant="52" id="JV3-Yf-e0v"/>
+                            <constraint firstItem="yPR-Xf-VjV" firstAttribute="top" secondItem="96V-py-B1t" secondAttribute="bottom" constant="40" id="hVf-FI-g4W"/>
+                            <constraint firstItem="M1J-sQ-IPv" firstAttribute="top" secondItem="chJ-Q4-PYR" secondAttribute="bottom" constant="42" id="ohc-Dc-c73"/>
+                            <constraint firstItem="yPR-Xf-VjV" firstAttribute="centerX" secondItem="Xbt-Jb-xXY" secondAttribute="centerX" id="p0q-R2-F4Z"/>
+                            <constraint firstItem="96V-py-B1t" firstAttribute="centerX" secondItem="Xbt-Jb-xXY" secondAttribute="centerX" id="q08-2d-UfN"/>
+                            <constraint firstItem="chJ-Q4-PYR" firstAttribute="centerX" secondItem="Xbt-Jb-xXY" secondAttribute="centerX" id="uVB-og-Xrx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Logout" image="arrowshape.turn.up.backward.2.fill" catalog="system" id="gun-su-mZF"/>
+                    <navigationItem key="navigationItem" id="9K1-Tu-WUN"/>
+                    <connections>
+                        <outlet property="pwdText" destination="96V-py-B1t" id="zdd-Wm-K4E"/>
+                        <outlet property="userNameText" destination="M1J-sQ-IPv" id="LuC-Fa-Rfi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="twf-Jo-mE8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753.8461538461538" y="-28.436018957345969"/>
+        </scene>
+        <!--Welcome to Student admin-->
+        <scene sceneID="QVL-iR-a4M">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IK3-42-pw5" customClass="HomeViewController" customModule="HW8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVM-UK-HPn" customClass="HomeView">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="C3c-2H-uuh">
+                                <rect key="frame" x="0.0" y="206" width="390" height="535"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XcB-qC-Q1v">
+                                <rect key="frame" x="16" y="150" width="358" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wri-UF-dcG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome to Student admin" id="PeB-Rd-NKQ"/>
+                    <connections>
+                        <outlet property="searchText" destination="XcB-qC-Q1v" id="8AE-3q-uWZ"/>
+                        <outlet property="searchView" destination="C3c-2H-uuh" id="Qjf-6U-hcf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KHh-QF-vhV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5000" y="12.796208530805687"/>
+        </scene>
+        <!--Manage Courses-->
+        <scene sceneID="4wx-OU-F16">
+            <objects>
+                <viewController id="HNV-02-yrZ" customClass="manageCourseViewController" customModule="HW8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WAE-CG-QCS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="HBA-A1-lz8">
+                                <rect key="frame" x="54" y="148" width="282" height="548"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Course ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N4t-E4-tkF">
+                                        <rect key="frame" x="50" y="75" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Course Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QWg-6F-SPm">
+                                        <rect key="frame" x="50" y="135" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter College ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ajn-LN-AGF">
+                                        <rect key="frame" x="50" y="200" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Category ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QDb-up-Akv">
+                                        <rect key="frame" x="50" y="315" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wWy-gN-U9q">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <items>
+                                            <navigationItem title="Add new course" id="kA1-Er-qyr">
+                                                <barButtonItem key="leftBarButtonItem" image="xmark" catalog="system" id="vsM-Bf-Yu0">
+                                                    <connections>
+                                                        <action selector="addCancel:" destination="HNV-02-yrZ" id="jkd-GV-IIO"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" systemItem="done" id="thd-rj-Lwf">
+                                                    <connections>
+                                                        <action selector="confirmAdd:" destination="HNV-02-yrZ" id="9jb-Ze-Gsx"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Program ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exj-lV-oyU">
+                                        <rect key="frame" x="50" y="257" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="1WZ-jD-xKf"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="lay-dd-4B5">
+                                <rect key="frame" x="54" y="148" width="282" height="548"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Course ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v62-ww-1mB">
+                                        <rect key="frame" x="50" y="75" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Course Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgd-Fs-xOp">
+                                        <rect key="frame" x="50" y="135" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter College ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aOW-eB-0er">
+                                        <rect key="frame" x="50" y="200" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Category ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6A-Fg-dhX">
+                                        <rect key="frame" x="50" y="315" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iy5-VF-lnH">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <items>
+                                            <navigationItem title="Update course" id="qta-eN-LXS">
+                                                <barButtonItem key="leftBarButtonItem" image="xmark" catalog="system" id="Kc6-pN-NJh">
+                                                    <connections>
+                                                        <action selector="updateCancel:" destination="HNV-02-yrZ" id="tDb-s5-1Zs"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" systemItem="done" id="2Jy-EL-0ay">
+                                                    <connections>
+                                                        <action selector="updateItem:" destination="HNV-02-yrZ" id="G5O-wT-7Nd"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Program ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VfT-uL-zbu">
+                                        <rect key="frame" x="50" y="257" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="tcM-OE-e5M"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="E1R-DA-jOF">
+                                <rect key="frame" x="0.0" y="91" width="390" height="753"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nbk-oU-6wh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E1R-DA-jOF" firstAttribute="centerX" secondItem="WAE-CG-QCS" secondAttribute="centerX" id="35b-sx-kDL"/>
+                            <constraint firstAttribute="trailing" secondItem="E1R-DA-jOF" secondAttribute="trailing" id="GgM-TR-X9w"/>
+                            <constraint firstItem="E1R-DA-jOF" firstAttribute="centerY" secondItem="WAE-CG-QCS" secondAttribute="centerY" id="TjV-Vf-CZK"/>
+                            <constraint firstItem="E1R-DA-jOF" firstAttribute="top" secondItem="nbk-oU-6wh" secondAttribute="top" id="Z0d-S0-Mfc"/>
+                            <constraint firstAttribute="bottom" secondItem="E1R-DA-jOF" secondAttribute="bottom" id="bj8-Wf-pap"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Manage Courses" id="BYz-HU-39J">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="iZI-n5-1OL">
+                            <connections>
+                                <action selector="addCourse:" destination="HNV-02-yrZ" id="jiZ-cv-roi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cateIdText" destination="QDb-up-Akv" id="tpv-Nl-e0q"/>
+                        <outlet property="cateIdText2" destination="T6A-Fg-dhX" id="bv6-V0-HD4"/>
+                        <outlet property="collegeIdText" destination="ajn-LN-AGF" id="xaK-p2-N19"/>
+                        <outlet property="collegeIdText2" destination="aOW-eB-0er" id="yi6-Tt-GrQ"/>
+                        <outlet property="courseIdText" destination="N4t-E4-tkF" id="xdh-Na-aO2"/>
+                        <outlet property="courseIdText2" destination="v62-ww-1mB" id="nuz-Hh-p0q"/>
+                        <outlet property="courseNameText" destination="QWg-6F-SPm" id="cNf-SO-H0c"/>
+                        <outlet property="courseNameText2" destination="fgd-Fs-xOp" id="EoC-M1-gmY"/>
+                        <outlet property="editView" destination="lay-dd-4B5" id="oY8-0B-h3b"/>
+                        <outlet property="programIdText" destination="exj-lV-oyU" id="7vl-RK-01F"/>
+                        <outlet property="programIdText2" destination="VfT-uL-zbu" id="uOU-th-WQV"/>
+                        <outlet property="subView" destination="HBA-A1-lz8" id="7gu-PE-9Q7"/>
+                        <outlet property="viewTable" destination="E1R-DA-jOF" id="soj-st-ecL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zAh-nq-5vz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4073.8461538461538" y="745.73459715639808"/>
+        </scene>
+        <!--Manage Course Category-->
+        <scene sceneID="qWf-DO-ASZ">
+            <objects>
+                <viewController id="zfs-ot-WiV" customClass="manageCateViewController" customModule="HW8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tXZ-gi-BHR">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="aeS-N1-g82">
+                                <rect key="frame" x="54" y="148" width="282" height="548"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Category ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w1t-PR-v0C">
+                                        <rect key="frame" x="50" y="75" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Category Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h7v-eh-3kT">
+                                        <rect key="frame" x="50" y="135" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jj0-gH-VfO">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <items>
+                                            <navigationItem title="Add new program" id="qLP-6y-ejH">
+                                                <barButtonItem key="leftBarButtonItem" image="xmark" catalog="system" id="jFu-LG-bDr">
+                                                    <connections>
+                                                        <action selector="addCancel:" destination="zfs-ot-WiV" id="xaz-7A-hih"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" systemItem="done" id="2ab-Fv-Szv">
+                                                    <connections>
+                                                        <action selector="confirmAdd:" destination="zfs-ot-WiV" id="FZM-c0-MJV"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="fKl-ff-oPs"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="PXT-mO-eIb">
+                                <rect key="frame" x="54" y="148" width="282" height="548"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Category ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eKa-aa-ebt">
+                                        <rect key="frame" x="50" y="75" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Category Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1O-1H-A6X">
+                                        <rect key="frame" x="50" y="135" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Jf-af-4za">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <items>
+                                            <navigationItem title="Add new program" id="Kr1-yu-CwM">
+                                                <barButtonItem key="leftBarButtonItem" image="xmark" catalog="system" id="ikc-z5-trt">
+                                                    <connections>
+                                                        <action selector="updateCancel:" destination="zfs-ot-WiV" id="owI-dC-xtR"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" systemItem="done" id="JUg-dm-tIG">
+                                                    <connections>
+                                                        <action selector="updateItem:" destination="zfs-ot-WiV" id="MoP-aH-B5C"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="yHX-Cj-1VR"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Keb-AF-UXh">
+                                <rect key="frame" x="0.0" y="91" width="390" height="753"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uzd-sg-kMn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Keb-AF-UXh" firstAttribute="top" secondItem="uzd-sg-kMn" secondAttribute="top" id="gSV-aG-qUF"/>
+                            <constraint firstAttribute="bottom" secondItem="Keb-AF-UXh" secondAttribute="bottom" id="iEv-gJ-jv5"/>
+                            <constraint firstAttribute="trailing" secondItem="Keb-AF-UXh" secondAttribute="trailing" id="nDd-q2-lzP"/>
+                            <constraint firstItem="Keb-AF-UXh" firstAttribute="centerX" secondItem="tXZ-gi-BHR" secondAttribute="centerX" id="pxR-mG-E61"/>
+                            <constraint firstItem="Keb-AF-UXh" firstAttribute="centerY" secondItem="tXZ-gi-BHR" secondAttribute="centerY" id="wZN-mj-Zne"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Manage Course Category" id="HPh-zI-mag">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="GF1-Xt-IyG">
+                            <connections>
+                                <action selector="addCategory:" destination="zfs-ot-WiV" id="0cx-BB-Zk0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cateIdText" destination="w1t-PR-v0C" id="ILh-pa-ifv"/>
+                        <outlet property="cateIdText2" destination="eKa-aa-ebt" id="D7A-vY-3cf"/>
+                        <outlet property="cateNameText" destination="h7v-eh-3kT" id="52V-79-hla"/>
+                        <outlet property="cateNameText2" destination="j1O-1H-A6X" id="3dy-1g-GNu"/>
+                        <outlet property="editView" destination="PXT-mO-eIb" id="VG0-DP-Xnm"/>
+                        <outlet property="subView" destination="aeS-N1-g82" id="Fxd-ZS-yww"/>
+                        <outlet property="viewTable" destination="Keb-AF-UXh" id="G6D-YX-7Zx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xua-UE-sD5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3350.7692307692305" y="1434.5971563981043"/>
+        </scene>
+        <!--Manage Colleges-->
+        <scene sceneID="ARS-UH-tHH">
+            <objects>
+                <viewController id="34d-V8-fxt" customClass="manageCollegeViewController" customModule="HW8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u3m-LL-rRb">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="cqd-V0-Awb">
+                                <rect key="frame" x="51" y="153" width="282" height="548"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter College ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kBC-On-5wN">
+                                        <rect key="frame" x="50" y="75" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter College Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lbQ-VH-6gY">
+                                        <rect key="frame" x="50" y="135" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter College Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ZC-Oy-Xg4">
+                                        <rect key="frame" x="50" y="200" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rzC-Bo-155">
+                                        <rect key="frame" x="50" y="362" width="188" height="109"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selece Image：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fib-HU-5O9">
+                                        <rect key="frame" x="50" y="319" width="120" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1om-jo-hb5">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <items>
+                                            <navigationItem title="Add new college" id="2Kj-gb-63J">
+                                                <barButtonItem key="leftBarButtonItem" image="xmark" catalog="system" id="X76-up-hwt">
+                                                    <connections>
+                                                        <action selector="addCancel:" destination="34d-V8-fxt" id="8B0-5C-ZNM"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" systemItem="done" id="GFC-j0-y8K">
+                                                    <connections>
+                                                        <action selector="confirmAdd:" destination="34d-V8-fxt" id="CFh-Tz-Fcy"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHH-0o-Os6">
+                                        <rect key="frame" x="178" y="312" width="49" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.fill" catalog="system" title=""/>
+                                        <connections>
+                                            <action selector="chooseImageTapped:" destination="34d-V8-fxt" eventType="touchUpInside" id="cfe-de-ejF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="Ddd-jM-D5z"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="SWf-Pv-IvT">
+                                <rect key="frame" x="51" y="153" width="282" height="548"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter College ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYh-NK-A2z">
+                                        <rect key="frame" x="50" y="75" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter College Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDG-ZP-t5U">
+                                        <rect key="frame" x="50" y="135" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter College Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dIs-Nd-DWI">
+                                        <rect key="frame" x="50" y="200" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKB-ZR-bSp">
+                                        <rect key="frame" x="50" y="362" width="188" height="109"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selece Image：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPG-wU-j9m">
+                                        <rect key="frame" x="50" y="319" width="120" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Pf-7d-nf7">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <items>
+                                            <navigationItem title="Update college" id="2FM-by-HkX">
+                                                <barButtonItem key="leftBarButtonItem" image="xmark" catalog="system" id="qt7-bk-cEF">
+                                                    <connections>
+                                                        <action selector="updateCancel:" destination="34d-V8-fxt" id="td6-bo-Kr3"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" systemItem="done" id="SXi-qX-Qcf">
+                                                    <connections>
+                                                        <action selector="updateItem:" destination="34d-V8-fxt" id="18g-AP-eeD"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1i-Os-VfW">
+                                        <rect key="frame" x="178" y="312" width="49" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.fill" catalog="system" title=""/>
+                                        <connections>
+                                            <action selector="chooseImageTapped:" destination="34d-V8-fxt" eventType="touchUpInside" id="oJ0-p0-HG4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="vED-NO-d81"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kvd-wG-JbT">
+                                <rect key="frame" x="0.0" y="91" width="390" height="753"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="99" id="b5g-Ok-90V" customClass="CustomTableViewCell" customModule="HW8">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="99"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" restorationIdentifier="CustomCell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b5g-Ok-90V" id="y3h-Fz-ZnX">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="50s-9z-4ar">
+                                                    <rect key="frame" x="20" y="0.0" width="187" height="99"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="187" id="wva-ma-7iG"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIo-dJ-Ib0">
+                                                    <rect key="frame" x="258" y="68" width="82" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLk-SQ-HlS">
+                                                    <rect key="frame" x="258" y="11" width="82" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9U-Ni-ISU">
+                                                    <rect key="frame" x="258" y="39" width="112" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="112" id="rSC-Ah-Q8g"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="r9U-Ni-ISU" firstAttribute="trailing" secondItem="y3h-Fz-ZnX" secondAttribute="trailingMargin" id="6hX-iB-8A2"/>
+                                                <constraint firstItem="r9U-Ni-ISU" firstAttribute="leading" secondItem="50s-9z-4ar" secondAttribute="trailing" constant="51" id="HBN-vV-IvE"/>
+                                                <constraint firstAttribute="bottom" secondItem="50s-9z-4ar" secondAttribute="bottom" id="T1H-U6-nTo"/>
+                                                <constraint firstItem="50s-9z-4ar" firstAttribute="top" secondItem="y3h-Fz-ZnX" secondAttribute="top" id="ZKs-kG-YKY"/>
+                                                <constraint firstItem="50s-9z-4ar" firstAttribute="leading" secondItem="y3h-Fz-ZnX" secondAttribute="leadingMargin" id="ZNp-Ej-C9V"/>
+                                                <constraint firstItem="r9U-Ni-ISU" firstAttribute="top" secondItem="NLk-SQ-HlS" secondAttribute="bottom" constant="8" symbolic="YES" id="ZXw-MP-MVq"/>
+                                                <constraint firstItem="CIo-dJ-Ib0" firstAttribute="top" secondItem="r9U-Ni-ISU" secondAttribute="bottom" constant="8" symbolic="YES" id="ab1-jj-qz0"/>
+                                                <constraint firstItem="r9U-Ni-ISU" firstAttribute="leading" secondItem="NLk-SQ-HlS" secondAttribute="leading" id="eoC-MD-OFM"/>
+                                                <constraint firstItem="r9U-Ni-ISU" firstAttribute="leading" secondItem="CIo-dJ-Ib0" secondAttribute="leading" id="om3-aF-Ik4"/>
+                                                <constraint firstItem="r9U-Ni-ISU" firstAttribute="centerY" secondItem="50s-9z-4ar" secondAttribute="centerY" id="tnt-7z-W7M"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addrCell" destination="CIo-dJ-Ib0" id="k8V-xw-e9I"/>
+                                            <outlet property="idCell" destination="NLk-SQ-HlS" id="NnR-F1-JLz"/>
+                                            <outlet property="imageCell" destination="50s-9z-4ar" id="5wl-Ws-hcH"/>
+                                            <outlet property="nameCell" destination="r9U-Ni-ISU" id="XzH-oY-4hx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ob7-xD-PSQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kvd-wG-JbT" firstAttribute="top" secondItem="Ob7-xD-PSQ" secondAttribute="top" id="72j-gI-fzh"/>
+                            <constraint firstItem="kvd-wG-JbT" firstAttribute="centerY" secondItem="u3m-LL-rRb" secondAttribute="centerY" id="Bls-Oi-pQI"/>
+                            <constraint firstItem="kvd-wG-JbT" firstAttribute="centerX" secondItem="u3m-LL-rRb" secondAttribute="centerX" id="QRN-ih-O4e"/>
+                            <constraint firstAttribute="bottom" secondItem="kvd-wG-JbT" secondAttribute="bottom" id="Trf-x6-XZt"/>
+                            <constraint firstAttribute="trailing" secondItem="kvd-wG-JbT" secondAttribute="trailing" id="VMX-dR-osg"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Manage Colleges" id="Zdy-gP-8GT">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="RUp-EP-qJV">
+                                <connections>
+                                    <action selector="addCollege:" destination="34d-V8-fxt" id="FIC-zw-OH5"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="icloud.and.arrow.down" catalog="system" id="I8N-dq-lwo">
+                                <connections>
+                                    <action selector="updateFromApi:" destination="34d-V8-fxt" id="fVD-1z-FWc"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addCancelBtn" destination="X76-up-hwt" id="cRo-nu-ms4"/>
+                        <outlet property="addCollegeBtn" destination="GFC-j0-y8K" id="OzZ-y5-8hT"/>
+                        <outlet property="chooseImageBtn" destination="kHH-0o-Os6" id="DIC-5z-Cu3"/>
+                        <outlet property="collegeAddressText" destination="2ZC-Oy-Xg4" id="3Xc-Mz-yvb"/>
+                        <outlet property="collegeAddressText2" destination="dIs-Nd-DWI" id="4Am-Ef-kYU"/>
+                        <outlet property="collegeIdTest2" destination="iYh-NK-A2z" id="U03-q0-qtZ"/>
+                        <outlet property="collegeIdText" destination="kBC-On-5wN" id="fme-64-JkH"/>
+                        <outlet property="collegeImageView" destination="rzC-Bo-155" id="2oU-zu-mDM"/>
+                        <outlet property="collegeImageView2" destination="RKB-ZR-bSp" id="m8O-dd-Xcz"/>
+                        <outlet property="collegeNameText" destination="lbQ-VH-6gY" id="GZe-YV-VkU"/>
+                        <outlet property="collegeNameText2" destination="MDG-ZP-t5U" id="6Wx-dT-l2F"/>
+                        <outlet property="editView" destination="SWf-Pv-IvT" id="ZYT-9c-uY8"/>
+                        <outlet property="subView" destination="cqd-V0-Awb" id="UNT-U5-3yl"/>
+                        <outlet property="viewTable" destination="kvd-wG-JbT" id="pgx-EE-NS3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YnD-5K-FOB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3069.2307692307691" y="-1430.3317535545023"/>
+        </scene>
+        <!--Manage Program-->
+        <scene sceneID="MPn-K0-ItG">
+            <objects>
+                <viewController id="Jik-Ta-IsQ" customClass="manageProgramViewController" customModule="HW8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RvZ-Qo-I3o">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="JQq-vh-1v0">
+                                <rect key="frame" x="54" y="148" width="282" height="548"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Program ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Uq-UL-ibB">
+                                        <rect key="frame" x="50" y="75" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Program Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1R8-Xt-YbR">
+                                        <rect key="frame" x="50" y="135" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter College ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MXQ-0t-CHy">
+                                        <rect key="frame" x="50" y="200" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lI1-sA-AB6">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <items>
+                                            <navigationItem title="Add new program" id="dUw-fP-CJo">
+                                                <barButtonItem key="leftBarButtonItem" image="xmark" catalog="system" id="iFN-KM-h9e">
+                                                    <connections>
+                                                        <action selector="addCancel:" destination="Jik-Ta-IsQ" id="qxZ-Jp-6qU"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" systemItem="done" id="2J8-h3-xaW">
+                                                    <connections>
+                                                        <action selector="confirmAdd:" destination="Jik-Ta-IsQ" id="l6m-ZY-ZS8"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="psW-i9-Ns3"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="Zjm-sE-5aL">
+                                <rect key="frame" x="51" y="153" width="282" height="548"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Program ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BaJ-mc-zl8">
+                                        <rect key="frame" x="50" y="75" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Program Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="90e-vD-Wbi">
+                                        <rect key="frame" x="50" y="135" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter College ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Su5-UH-MJk">
+                                        <rect key="frame" x="50" y="200" width="188" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DJY-wE-T7j">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <items>
+                                            <navigationItem title="Update program" id="sY1-Wq-R1W">
+                                                <barButtonItem key="leftBarButtonItem" image="xmark" catalog="system" id="IZl-KH-2bO">
+                                                    <connections>
+                                                        <action selector="updateCancel:" destination="Jik-Ta-IsQ" id="0L0-1Q-1c0"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" systemItem="done" id="j4H-bX-V3i">
+                                                    <connections>
+                                                        <action selector="updateItem:" destination="Jik-Ta-IsQ" id="zKT-gU-CHf"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="TRg-SD-cfL"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NQr-6S-aAc">
+                                <rect key="frame" x="0.0" y="91" width="390" height="753"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mbs-JM-aMx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NQr-6S-aAc" firstAttribute="top" secondItem="mbs-JM-aMx" secondAttribute="top" id="4me-ff-YpD"/>
+                            <constraint firstAttribute="bottom" secondItem="NQr-6S-aAc" secondAttribute="bottom" id="T24-Y0-lFd"/>
+                            <constraint firstItem="NQr-6S-aAc" firstAttribute="centerX" secondItem="RvZ-Qo-I3o" secondAttribute="centerX" id="Vsr-9p-i4f"/>
+                            <constraint firstItem="NQr-6S-aAc" firstAttribute="centerY" secondItem="RvZ-Qo-I3o" secondAttribute="centerY" id="bTv-DY-gvy"/>
+                            <constraint firstAttribute="trailing" secondItem="NQr-6S-aAc" secondAttribute="trailing" id="lUg-gm-2J0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Manage Program" id="JP8-mn-raN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wk3-oe-77y">
+                            <connections>
+                                <action selector="addProgram:" destination="Jik-Ta-IsQ" id="D0Y-Lb-6me"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collegeIdText" destination="MXQ-0t-CHy" id="2yh-Vv-ZjJ"/>
+                        <outlet property="collegeIdText2" destination="Su5-UH-MJk" id="zGA-bO-MYy"/>
+                        <outlet property="editView" destination="Zjm-sE-5aL" id="aVO-3R-tJc"/>
+                        <outlet property="programIdText" destination="8Uq-UL-ibB" id="Xjb-cT-IfC"/>
+                        <outlet property="programIdText2" destination="BaJ-mc-zl8" id="4fv-Xv-8ew"/>
+                        <outlet property="programNameText" destination="1R8-Xt-YbR" id="aBz-EK-tYw"/>
+                        <outlet property="programNameText2" destination="90e-vD-Wbi" id="0pM-mn-AkT"/>
+                        <outlet property="subView" destination="JQq-vh-1v0" id="Hcq-vB-GlH"/>
+                        <outlet property="viewTable" destination="NQr-6S-aAc" id="igO-Mr-frY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZOz-Rf-9aV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4663.0769230769229" y="-746.44549763033172"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Iv0-5X-UdV">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarFirst" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="is4-Bs-q9X" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="twg-Fn-ARO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mtX-hf-85f">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="T1G-mj-sUK" kind="relationship" relationship="viewControllers" id="O9e-rl-Qbq"/>
+                        <segue destination="pHB-n5-yrn" kind="relationship" relationship="viewControllers" id="Syx-GZ-CXg"/>
+                        <segue destination="4Kt-ul-9XD" kind="relationship" relationship="viewControllers" id="o5Y-Us-YZq"/>
+                        <segue destination="hlO-SJ-EBY" kind="relationship" relationship="viewControllers" id="18U-kH-DcC"/>
+                        <segue destination="pL5-Gc-z40" kind="relationship" relationship="viewControllers" id="Kph-b2-IC5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XkM-JB-jWP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2476.9230769230767" y="-28.436018957345969"/>
+        </scene>
+        <!--College-->
+        <scene sceneID="wun-dC-saZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Kt-ul-9XD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="College" image="folder.fill" catalog="system" id="2JH-Uc-wu9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8go-SM-lEp">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="34d-V8-fxt" kind="relationship" relationship="rootViewController" id="eIf-ca-MIi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rAK-Xy-bZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2127.6923076923076" y="-1282.4644549763032"/>
+        </scene>
+        <!--Program-->
+        <scene sceneID="uyr-jK-iJD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pHB-n5-yrn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Program" image="tray.2.fill" catalog="system" id="tMc-mK-cwr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SeQ-x9-az4">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jik-Ta-IsQ" kind="relationship" relationship="rootViewController" id="5Rr-19-n2D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pTY-Y8-7D2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3733.8461538461538" y="-746.44549763033172"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="63W-oG-knZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T1G-mj-sUK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="iphone.homebutton.circle.fill" catalog="system" id="iHh-zi-qHz"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jzh-NG-SsQ">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IK3-42-pw5" kind="relationship" relationship="rootViewController" id="E3l-XG-PAD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJA-Mp-Lmx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4072.3076923076924" y="15.639810426540283"/>
+        </scene>
+        <!--Course-->
+        <scene sceneID="oYV-66-0qu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hlO-SJ-EBY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Course" image="clipboard.fill" catalog="system" id="upC-CX-Qpc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vvJ-fz-X5R">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HNV-02-yrZ" kind="relationship" relationship="rootViewController" id="sMO-Qx-5ff"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m3o-aP-9rN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3144.6153846153843" y="745.73459715639808"/>
+        </scene>
+        <!--Course Category-->
+        <scene sceneID="DtE-Ne-Q6N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pL5-Gc-z40" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Course Category" image="character.book.closed.fill.ar" catalog="system" id="Rcf-99-dDg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Ec-jJ-d2W">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zfs-ot-WiV" kind="relationship" relationship="rootViewController" id="sN1-mD-XR3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="upt-e6-Jsf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2421.5384615384614" y="1434.5971563981043"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c0N-SU-vXD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NwQ-2w-zdF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U3d-M7-O3n">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jSs-Zs-nlb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UL5-HD-tpG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.84615384615384" y="-28.436018957345969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowshape.turn.up.backward.2.fill" catalog="system" width="128" height="86"/>
+        <image name="character.book.closed.fill.ar" catalog="system" width="115" height="128"/>
+        <image name="clipboard.fill" catalog="system" width="103" height="128"/>
+        <image name="folder.fill" catalog="system" width="128" height="96"/>
+        <image name="icloud.and.arrow.down" catalog="system" width="128" height="111"/>
+        <image name="iphone.homebutton.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+        <image name="tray.2.fill" catalog="system" width="128" height="115"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="quaternarySystemFillColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
